@@ -46,10 +46,10 @@ https://tenable.com/products/nessus/nessus-essentials
 **Note: Nessus will not be ready until it finishes compiling**
 
 **no scan**
-![alt text](./Screenshot 2024-05-22 at 23.53.12.png)
+![alt text](./screenshot2.png)
 
 **message about lack of functionality**
 ![alt text](./image.png)
 
 **podman logs with progress**
-![alt text](./Screenshot 2024-05-22 at 23.52.54.png)
+![alt text](./screenshot1.png)
