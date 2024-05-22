@@ -26,7 +26,13 @@ Follow and choose
 
 $ podman pull docker.io/tenable/nessus:latest-ubuntu
 
-$ podman run -dt -p 8834:8834 docker.io/tenable/nessus:latest-ubuntu
+# Set higher limits for podmand (needed)
+$ podman machine stop
+$ podman machine set --cpus 8 --memory 6144
+$ podman machine start
+
+#$ podman run -dt -p 8834:8834 docker.io/tenable/nessus:latest-ubuntu
+$ podman run -dt --name tenable_3 -m 5120m --cpuset-cpus 4-12 -p 8834:8834 docker.io/tenable/nessus:latest-ubuntu
 
 # see intance here: 
 https://0.0.0.0:8834/#/
@@ -34,29 +40,16 @@ https://0.0.0.0:8834/#/
 # Register for Nessus Essentials to get activation key
 https://tenable.com/products/nessus/nessus-essentials
 
+# Use activation key to register and wait for scanner to come online
 ```
 
+**Note: Nessus will not be ready until it finishes compiling**
 
-## Podman Notes
+**no scan**
+![alt text](./Screenshot 2024-05-22 at 23.53.12.png)
 
-Side notes on `podman` commands just as refresher.
+**message about lack of functionality**
+![alt text](./image.png)
 
-```python
-#exec inter active terminal to running container
-$ podman exec -it  1489aff68f32 /bin/bash
-
-
-## Adding memory to podman
-
-podman machine stop
-podman machine set --cpus 5 --memory 5120
-podman machine start
-
-
-## Container specific memory
-# https://jasebell.medium.com/understanding-memory-management-in-containers-with-podman-e916ea9039df
-
-$ podman run -dt --name tenable_2 -m 5120m -p 8834:8834 docker.io/tenable/nessus:latest-ubuntu
-
-
-```
+**podman logs with progress**
+![alt text](./Screenshot 2024-05-22 at 23.52.54.png)
