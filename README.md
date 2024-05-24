@@ -34,6 +34,9 @@ $ podman machine start
 #$ podman run -dt -p 8834:8834 docker.io/tenable/nessus:latest-ubuntu
 $ podman run -dt --name tenable_3 -m 5120m --cpuset-cpus 4-12 -p 8834:8834 docker.io/tenable/nessus:latest-ubuntu
 
+# After container exist you can start it from the Podman app or from CLI
+$ podman start tenable_3 
+
 # see intance here: 
 https://0.0.0.0:8834/#/
 
