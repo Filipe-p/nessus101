@@ -12,12 +12,12 @@ This `README` is to keep our notes as we're going to explore the Tennable Nessus
 
 Note: See original `README.md` to setup a container with a pod
 
-### Connecting & Getting Started 
+### Getting Started 
 
 **API docs**
 We're using the internal documentation as reference https://0.0.0.0:8834/api#/overview.
 
-**Virtual environment**
+**Virtual environment and dependencies**
 
 Create a virtual environment, activate it and consume the requierments 
 
@@ -32,3 +32,5 @@ $ source venv/bin/activate
 $ pip install -r .requirements.txt
 
 ```
+
+### Connection / Authenthication
