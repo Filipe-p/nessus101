@@ -31,6 +31,9 @@ $ source venv/bin/activate
 # Consume dependencies
 $ pip install -r .requirements.txt
 
+# deactivete the enviroment
+$ source deactivate
+
 ```
 
 ### Connection / Authenthication

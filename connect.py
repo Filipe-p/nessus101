@@ -6,7 +6,8 @@ import getpass
 ## Vars
 # tn_user_name = input("Tenable user name: \n")
 # tn_pass = input("Tenable passworkd: \n")
-
+tn_user_name = "FilipeP" # not for prod
+tn_pass = getpass.getpass("Tenable password: \n") # Not for prod
 # tn_host = "0.0.0.0"
 # tn_url_base = f'https://{tn_host}:8834/'
 
@@ -18,11 +19,6 @@ import getpass
 # tn_connection = requests.post(tn_urL_request, data=data_block, verify=False)
 
 # print(tn_connection.status_code)
-
-
-tn_user_name = "FilipeP" # not for prod
-tn_pass = getpass.getpass("Tenable password: \n") # Not for prod
-
 
 class Tn_connection:
 
