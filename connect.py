@@ -6,19 +6,23 @@ import getpass
 ## Vars
 # tn_user_name = input("Tenable user name: \n")
 # tn_pass = input("Tenable passworkd: \n")
+
+# tn_host = "0.0.0.0"
+# tn_url_base = f'https://{tn_host}:8834/'
+
+# ## Loggin specific
+# data_block = {'username': tn_user_name, 'password': tn_pass}
+# tn_url_path = 'session'
+# tn_urL_request = tn_url_base + tn_url_path
+
+# tn_connection = requests.post(tn_urL_request, data=data_block, verify=False)
+
+# print(tn_connection.status_code)
+
+
 tn_user_name = "FilipeP" # not for prod
 tn_pass = getpass.getpass("Tenable password: \n") # Not for prod
-tn_host = "0.0.0.0"
-tn_url_base = f'https://{tn_host}:8834/'
 
-## Loggin specific
-data_block = {'username': tn_user_name, 'password': tn_pass}
-tn_url_path = 'session'
-tn_urL_request = tn_url_base + tn_url_path
-
-tn_connection = requests.post(tn_urL_request, data=data_block, verify=False)
-
-print(tn_connection.status_code)
 
 class Tn_connection:
 
@@ -36,7 +40,7 @@ class Tn_connection:
         self.json = self.tn_connection.json()
         self.md5sum_wizard_templates = self.tn_connection.json()['md5sum_wizard_templates']
         self.token = self.tn_connection.json()['token']
-        self.md5sum_tenable_links = tn_connection.json()['md5sum_tenable_links']
+        self.md5sum_tenable_links = self.tn_connection.json()['md5sum_tenable_links']
 
 
 
