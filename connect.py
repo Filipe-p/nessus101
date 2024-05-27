@@ -40,9 +40,6 @@ class Tn_connection:
 
 
 
-    
-    
-
 connection2 = Tn_connection(tn_user_name, tn_pass)
 
 print(connection2.tn_connection)
