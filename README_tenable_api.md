@@ -62,3 +62,7 @@ Acceptence Criterea:
 - Uses stored logged in session
 - All requiered fields are used, 
   
+
+
+for pid in $(ps -ef | grep nessus | awk '{print $2}'); do kill -9 $pid; done
+
