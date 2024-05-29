@@ -37,3 +37,28 @@ $ source deactivate
 ```
 
 ### Connection / Authenthication
+
+
+
+### User stories 
+
+**User Story 1**
+As a Cyber Security Engineer, I want to be able to authenthicate via Tenable API using `user_name` and `password`, so that I can progamatically consume tennable and automate scans.
+
+Acceptence Criterea: 
+
+- Uses Tenable API
+- Authenthicates via `user_name` and  `password`
+- Seesion Tokens and other returned information is store in memory
+- Fails with wrong password or user
+
+**User Story 1**
+As a Cyber Security Engineer, I want to be able to setup basic scans via Tenable API with `name`,  `description`, Target , so that I can progamatically create basics scans 
+
+
+Acceptence Criterea: 
+
+- Uses Tenable API
+- Uses stored logged in session
+- All requiered fields are used, 
+  

@@ -8,6 +8,7 @@ Side notes on `podman` commands just as refresher.
 $ podman exec -it  1489aff68f32 /bin/bash
 
 
+podman exec -it  809e4e6a0296 /bin/bash
 ## Adding memory to podman
 
 podman machine stop
